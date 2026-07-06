@@ -1,11 +1,12 @@
-name: workspace
+name: kali-env
 channels:
   - conda-forge
 dependencies:
+  - python=3.11
   - jupyterlab
   - jupyter-vscode-proxy
   - code-server
-  - nmap
-  - sqlmap
-  - hydra
-  - john
+  - proot
+  - curl
+  - tar
+  - xz
