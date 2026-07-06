@@ -2,7 +2,7 @@
   "terminal.integrated.profiles.linux": {
     "Kali": {
       "path": "bash",
-      "args": ["-c", "cd \"${workspaceFolder}\" && exec ./start-kali.sh"]
+      "args": ["-c", "cd \"${workspaceFolder}\" && exec bash ./start-kali.sh"]
     }
   },
   "terminal.integrated.defaultProfile.linux": "Kali"
