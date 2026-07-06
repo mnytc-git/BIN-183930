@@ -1,0 +1,6 @@
+name: workspace
+channels:
+  - conda-forge
+dependencies:
+  - jupyterlab
+  - jupyter-vscode-proxy
