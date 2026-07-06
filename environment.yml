@@ -4,3 +4,4 @@ channels:
 dependencies:
   - jupyterlab
   - jupyter-vscode-proxy
+  - code-server
