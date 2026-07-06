@@ -1,12 +1,7 @@
-name: kali-env
+name: workspace
 channels:
   - conda-forge
 dependencies:
-  - python=3.11
   - jupyterlab
   - jupyter-vscode-proxy
   - code-server
-  - proot
-  - curl
-  - tar
-  - xz
