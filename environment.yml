@@ -5,3 +5,7 @@ dependencies:
   - jupyterlab
   - jupyter-vscode-proxy
   - code-server
+  - nmap
+  - sqlmap
+  - hydra
+  - john
