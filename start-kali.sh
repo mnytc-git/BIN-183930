@@ -5,7 +5,7 @@ set -e
 BIN="$HOME/bin"
 KALI="$HOME/kali"
 PROOT="$BIN/proot"
-URL="https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-full-amd64.tar.xz"
+URL="https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-amd64.tar.xz"
 
 export PATH="$BIN:$PATH"
 
