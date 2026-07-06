@@ -1,5 +1,0 @@
-#!/bin/bash
-set -e
-mkdir -p ~/kali && cd ~/kali
-curl -L -o kali.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-full-amd64.tar.xz
-tar -xJf kali.tar.xz
