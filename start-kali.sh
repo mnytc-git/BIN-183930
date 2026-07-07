@@ -21,6 +21,16 @@ if [ ! -x "$PROOT" ]; then
   chmod +x "$PROOT"
 fi
 
+# RAM gate — a kernel OOM kill is SIGKILL(9): uncatchable, so we MUST decide
+# BEFORE attempting the xz extract. Need ~1.5GB available to be safe.
+MIN_MB="${MIN_MB:-1500}"
+AVAIL_MB=$(awk '/MemAvailable/ {print int($2/1024)}' /proc/meminfo 2>/dev/null || echo 0)
+if [ "${KALI_FALLBACK:-}" != "alpine" ] && [ "$AVAIL_MB" -lt "$MIN_MB" ]; then
+  echo "[!] low RAM: ${AVAIL_MB}MB available (< ${MIN_MB}MB) — Kali xz extract would OOM-kill."
+  echo "[!] auto-selecting Alpine minirootfs to keep the terminal alive."
+  KALI_FALLBACK=alpine
+fi
+
 # 2. rootfs — skip if already extracted (kali-* or alpine-* dir)
 ROOTFS=$(ls -d "$KALI"/kali-*-rootfs "$KALI"/rootfs 2>/dev/null | head -n1 || true)
 if [ -z "$ROOTFS" ]; then
